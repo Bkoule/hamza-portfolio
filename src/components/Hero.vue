@@ -68,8 +68,8 @@
             </div>
           </div>
           
-          <div class="hero__skills">
-            <div class="skill-badge" v-for="skill in skills" :key="skill" :style="{ animationDelay: `${skills.indexOf(skill) * 0.1}s` }">
+          <div class="hero__skills stagger-children">
+            <div class="skill-badge stagger-item" v-for="skill in skills" :key="skill">
               {{ skill }}
             </div>
           </div>

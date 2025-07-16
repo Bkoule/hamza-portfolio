@@ -1,5 +1,8 @@
 <template>
   <div class="app">
+    <ScrollProgress />
+    <MouseCursor />
+    
     <Header />
     
     <main class="main-content">
@@ -7,12 +10,17 @@
     </main>
     
     <Footer />
+    
+    <BackToTop />
   </div>
 </template>
 
 <script setup>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import ScrollProgress from '@/components/ScrollProgress.vue'
+import MouseCursor from '@/components/MouseCursor.vue'
+import BackToTop from '@/components/BackToTop.vue'
 </script>
 
 <style lang="scss">
