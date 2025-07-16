@@ -36,7 +36,7 @@
 </script>
 
 <style lang="scss">
-@import '@/assets/styles/variables';
+@import './assets/styles/variables';
 
 .app {
   min-height: 100vh;
