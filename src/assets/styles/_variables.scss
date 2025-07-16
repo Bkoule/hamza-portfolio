@@ -1,0 +1,101 @@
+// ============================================
+// Variables SCSS pour le Portfolio
+// ============================================
+
+// Couleurs principales
+$primary: #4f46e5;          // Indigo moderne
+$secondary: #f59e0b;        // Amber accent
+$accent: #8b5cf6;           // Violet pour les highlights
+
+// Couleurs neutres
+$dark: #1f2937;             // Gris très foncé
+$light: #f8fafc;           // Gris très clair
+$white: #ffffff;
+$gray-100: #f1f5f9;
+$gray-200: #e2e8f0;
+$gray-300: #cbd5e1;
+$gray-400: #94a3b8;
+$gray-500: #64748b;
+$gray-600: #475569;
+$gray-700: #334155;
+$gray-800: #1e293b;
+$gray-900: #0f172a;
+
+// Couleurs d'état
+$success: #10b981;          // Vert succès
+$warning: #f59e0b;          // Orange warning
+$error: #ef4444;            // Rouge erreur
+$info: #3b82f6;             // Bleu info
+
+// Typographie
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-heading: 'Inter', sans-serif;
+$font-family-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+// Tailles de police
+$font-size-xs: 0.75rem;     // 12px
+$font-size-sm: 0.875rem;    // 14px
+$font-size-base: 1rem;      // 16px
+$font-size-lg: 1.125rem;    // 18px
+$font-size-xl: 1.25rem;     // 20px
+$font-size-2xl: 1.5rem;     // 24px
+$font-size-3xl: 1.875rem;   // 30px
+$font-size-4xl: 2.25rem;    // 36px
+$font-size-5xl: 3rem;       // 48px
+
+// Poids de police
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Hauteurs de ligne
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Espacements
+$spacing-xs: 0.25rem;       // 4px
+$spacing-sm: 0.5rem;        // 8px
+$spacing-md: 1rem;          // 16px
+$spacing-lg: 1.5rem;        // 24px
+$spacing-xl: 2rem;          // 32px
+$spacing-2xl: 3rem;         // 48px
+$spacing-3xl: 4rem;         // 64px
+$spacing-4xl: 6rem;         // 96px
+
+// Bordures
+$border-radius-sm: 0.25rem; // 4px
+$border-radius-md: 0.5rem;  // 8px
+$border-radius-lg: 0.75rem; // 12px
+$border-radius-xl: 1rem;    // 16px
+$border-radius-full: 9999px;
+
+$border-width: 1px;
+$border-color: $gray-200;
+
+// Ombres
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Transitions
+$transition-fast: 0.15s ease-out;
+$transition-normal: 0.3s ease-out;
+$transition-slow: 0.5s ease-out;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Z-index
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal: 1040;
+$z-tooltip: 1070;
