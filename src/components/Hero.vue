@@ -128,6 +128,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/variables';
+
 .hero {
   position: relative;
   min-height: 100vh;

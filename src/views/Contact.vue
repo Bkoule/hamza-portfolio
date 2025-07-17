@@ -511,7 +511,7 @@ const handleSubmit = async () => {
           }
           
           &.error {
-            border-color: $danger;
+            border-color: $error;
             
             &:focus {
               box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
@@ -544,7 +544,7 @@ const handleSubmit = async () => {
         .error-message {
           display: block;
           margin-top: $spacing-xs;
-          color: $danger;
+          color: $error;
           font-size: $font-size-sm;
           font-weight: $font-weight-medium;
         }
@@ -653,7 +653,7 @@ const handleSubmit = async () => {
   &.error {
     background: rgba(220, 38, 38, 0.1);
     border: 1px solid rgba(220, 38, 38, 0.3);
-    color: $danger;
+    color: $error;
   }
   
   .status-icon {

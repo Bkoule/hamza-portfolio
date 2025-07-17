@@ -65,6 +65,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/variables';
+
 .footer {
   background: $gray-900;
   color: $white;
