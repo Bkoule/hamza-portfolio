@@ -81,7 +81,12 @@
             @click="openProjectModal(project)"
           >
             <div class="project-image">
-              <div class="image-placeholder">
+              <!-- Project with actual image -->
+              <div v-if="project.image" class="project-img">
+                <img :src="project.image" :alt="project.title" />
+              </div>
+              <!-- Placeholder for projects without image -->
+              <div v-else class="image-placeholder">
                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                   <circle cx="8.5" cy="8.5" r="1.5"/>
@@ -178,6 +183,35 @@
         <div class="modal-body">
           <p class="modal-description">{{ selectedProject.longDescription }}</p>
           
+          <!-- Gallery for mobile projects -->
+          <div v-if="selectedProject.category === 'mobile' && selectedProject.images" class="modal-section">
+            <h3>{{ getGalleryTitle(selectedProject.id) }}</h3>
+            <div class="modal-gallery">
+              <!-- 3D Gallery for projects 1, 4, and 5 -->
+              <PhoneGallery3D v-if="selectedProject.id === 1 || selectedProject.id === 4 || selectedProject.id === 5" :images="selectedProject.images" />
+              <!-- Stacked Cards for second project -->
+              <StackedCards v-else-if="selectedProject.id === 2" :images="selectedProject.images" :title="selectedProject.title" />
+              <!-- Flat Gallery for third project -->
+              <FlatGallery v-else-if="selectedProject.id === 3" :images="selectedProject.images" :title="selectedProject.title" />
+            </div>
+          </div>
+          
+          <!-- Gallery for web projects -->
+          <div v-if="selectedProject.category === 'web' && selectedProject.image" class="modal-section">
+            <h3>{{ getGalleryTitle(selectedProject.id) }}</h3>
+            <div class="modal-gallery">
+              <!-- Browser Mockup for web projects -->
+              <BrowserMockup 
+                :screenshot="selectedProject.image" 
+                :title="selectedProject.title"
+                :description="selectedProject.description"
+                :url="selectedProject.demoUrl || 'https://example.com'"
+                :demo-url="selectedProject.demoUrl"
+                :github-url="selectedProject.githubUrl"
+              />
+            </div>
+          </div>
+          
           <div class="modal-section">
             <h3>Technologies utilisées</h3>
             <div class="modal-technologies">
@@ -232,6 +266,10 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { projects, categories } from '@/data/projects.js'
+import PhoneGallery3D from '@/components/PhoneGallery3D.vue'
+import StackedCards from '@/components/StackedCards.vue'
+import FlatGallery from '@/components/FlatGallery.vue'
+import BrowserMockup from '@/components/BrowserMockup.vue'
 
 const activeCategory = ref('all')
 const viewMode = ref('grid')
@@ -256,6 +294,18 @@ const openProjectModal = (project) => {
 const closeModal = () => {
   selectedProject.value = null
   document.body.style.overflow = 'auto'
+}
+
+const getGalleryTitle = (projectId) => {
+  const titles = {
+    1: 'Screenshots',
+    2: 'Aperçu',
+    3: 'Fonctionnalités',
+    4: 'Écrans',
+    5: 'Contributions',
+    6: 'Démo Web'
+  }
+  return titles[projectId] || 'Aperçu'
 }
 
 const openDemo = (project) => {
@@ -467,6 +517,17 @@ onMounted(() => {
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      
+      .project-img {
+        width: 100%;
+        height: 100%;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
       
       .image-placeholder {
         color: $gray-400;
@@ -710,6 +771,20 @@ onMounted(() => {
             color: $gray-700;
             margin-bottom: $spacing-xs;
             line-height: 1.5;
+          }
+        }
+      }
+      
+      .modal-gallery {
+        display: flex;
+        justify-content: center;
+        margin: $spacing-xl 0;
+        
+        .phone-gallery-3d {
+          transform: scale(0.7);
+          
+          @media (max-width: $breakpoint-md) {
+            transform: scale(0.5);
           }
         }
       }

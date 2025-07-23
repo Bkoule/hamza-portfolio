@@ -1,232 +1,235 @@
 export const projects = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'Une plateforme e-commerce complète avec panier, paiement et gestion des commandes.',
-    longDescription: 'Développement d\'une plateforme e-commerce moderne avec Vue.js et Node.js. Intégration de Stripe pour les paiements, système de gestion des stocks, tableau de bord administrateur complet.',
-    image: '/images/projects/ecommerce.jpg',
-    technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Stripe', 'Express'],
-    category: 'fullstack',
+    title: 'LFL Companion',
+    description: 'Application mobile de scoring pour la LFL (League of Legends Championship) avec gestion d\'Ã©quipes et statistiques.',
+    longDescription: 'Application mobile native dÃ©veloppÃ©e en Kotlin pour le scoring en temps rÃ©el des matchs de la LFL. Interface moderne avec thÃ¨me sombre, architecture MVVM, et intÃ©gration d\'APIs pour les statistiques des Ã©quipes et joueurs.',
+    image: '/images/projects/lfl/screen1.png',
+    images: [
+      '/images/projects/lfl/screen1.png',
+      '/images/projects/lfl/screen2.png', 
+      '/images/projects/lfl/screen3.png',
+      '/images/projects/lfl/screen4.png'
+    ],
+    technologies: ['Kotlin', 'Jetpack Compose', 'MVVM', 'MockK', 'Retrofit', 'Material Design'],
+    category: 'mobile',
     featured: true,
     status: 'completed',
-    year: 2024,
-    demoUrl: 'https://demo-ecommerce.com',
-    githubUrl: 'https://github.com/username/ecommerce-platform',
+    year: 2023,
+    demoUrl: null,
+    githubUrl: 'https://github.com/username/lfl-companion',
     challenges: [
-      'Optimisation des performances pour le catalogue produits',
-      'Sécurisation des transactions de paiement',
-      'Gestion d\'état complexe pour le panier'
+      'Optimisation des performances pour le scoring temps rÃ©el',
+      'Architecture Model-View-ViewModel (MVVM) pour une sÃ©paration claire',
+      'IntÃ©gration d\'APIs externes pour les donnÃ©es des Ã©quipes',
+      'Design system cohÃ©rent avec Material Design'
     ],
     features: [
-      'Authentification utilisateur',
-      'Panier et wishlist',
-      'Paiement sécurisé',
-      'Gestion des commandes',
-      'Interface admin',
-      'Responsive design'
+      'Scoring en temps rÃ©el des matchs',
+      'Gestion des Ã©quipes et joueurs',
+      'Statistiques dÃ©taillÃ©es et graphiques',
+      'Interface utilisateur moderne avec thÃ¨me sombre',
+      'Architecture MVVM robuste',
+      'Tests unitaires avec MockK',
+      'IntÃ©gration API avec Retrofit',
+      'Navigation fluide entre les Ã©crans'
     ]
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Application de gestion de tâches collaborative avec équipes et projets.',
-    longDescription: 'Application de productivité permettant la gestion de tâches en équipe. Fonctionnalités de collaboration en temps réel, notifications, et tableaux de bord personnalisés.',
-    image: '/images/projects/taskapp.jpg',
-    technologies: ['React', 'Node.js', 'Socket.io', 'PostgreSQL'],
-    category: 'frontend',
+    title: 'VALORANK',
+    description: 'Application mobile pour suivre les tournois et statistiques Valorant esports avec classements et Ã©quipes favorites.',
+    longDescription: 'VALORANK est une application mobile dÃ©veloppÃ©e en Kotlin pour streamliner l\'expÃ©rience de suivi des tournois Valorant esports. Elle offre la possibilitÃ© de suivre en temps rÃ©el les tournois, consulter les statistiques des joueurs, et explorer les classements globaux des Ã©quipes performantes.',
+    image: '/images/projects/valorank/screen1.png',
+    images: [
+      '/images/projects/valorank/screen1.png',
+      '/images/projects/valorank/screen2.png', 
+      '/images/projects/valorank/screen3.png',
+      '/images/projects/valorank/screen4.png'
+    ],
+    technologies: ['Kotlin', 'MVVM', 'Spring Boot', 'Material Components', 'ViewBinding', 'Retrofit', 'Glide'],
+    category: 'mobile',
     featured: true,
     status: 'completed',
     year: 2023,
-    demoUrl: 'https://demo-taskapp.com',
-    githubUrl: 'https://github.com/username/task-management',
+    demoUrl: null,
+    githubUrl: 'https://github.com/username/valorank',
     challenges: [
-      'Synchronisation en temps réel des données',
-      'Gestion des permissions d\'équipe',
-      'Interface utilisateur intuitive'
+      'IntÃ©gration des APIs Valorant pour les donnÃ©es en temps rÃ©el',
+      'Architecture MVVM robuste pour la gestion des donnÃ©es',
+      'Interface utilisateur avec Material Components',
+      'Gestion des images et cache avec Glide'
     ],
     features: [
-      'Gestion de projets',
-      'Collaboration temps réel',
-      'Notifications push',
-      'Calendrier intégré',
-      'Rapports et analytics',
-      'Mode sombre'
+      'Suivi des tournois en temps rÃ©el',
+      'Classements des Ã©quipes et joueurs',
+      'Statistiques dÃ©taillÃ©es des performances',
+      'Ã‰quipes favorites avec notifications',
+      'Interface Material Design moderne',
+      'Navigation fluide entre les sections',
+      'DonnÃ©es synchronisÃ©es avec les APIs officielles',
+      'Optimisation des performances rÃ©seau'
     ]
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Tableau de bord météo interactif avec données en temps réel.',
-    longDescription: 'Application météo moderne avec prévisions détaillées, cartes interactives et historique des données. Interface responsive avec animations fluides.',
-    image: '/images/projects/weather.jpg',
-    technologies: ['Vue.js', 'Chart.js', 'OpenWeather API', 'Tailwind CSS'],
-    category: 'frontend',
-    featured: false,
+    title: 'Harry Potter Trivia',
+    description: 'Application Android de trivia Harry Potter avec systÃ¨me ELO, gestion des vies, achats in-app et notifications magiques.',
+    longDescription: 'Application Android complÃ¨te dÃ©veloppÃ©e en Kotlin et Jetpack Compose. SystÃ¨me de trivia avec questions Harry Potter, classement ELO, gestion des vies avec rÃ©gÃ©nÃ©ration, achats in-app via RevenueCat, publicitÃ©s AdMob, et notifications locales thÃ©matiques. Architecture modulaire avec Hilt, Firebase et backend API personnalisÃ©.',
+    image: '/images/projects/harry-potter/screen1.png',
+    images: [
+      '/images/projects/harry-potter/screen1.png',
+      '/images/projects/harry-potter/screen2.png', 
+      '/images/projects/harry-potter/screen3.png',
+      '/images/projects/harry-potter/screen4.png',
+      '/images/projects/harry-potter/screen5.png'
+    ],
+    technologies: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Hilt', 'Retrofit', 'RevenueCat', 'AdMob', 'Lottie'],
+    category: 'mobile',
+    featured: true,
     status: 'completed',
-    year: 2023,
-    demoUrl: 'https://demo-weather.com',
-    githubUrl: 'https://github.com/username/weather-dashboard',
+    year: 2024,
+    demoUrl: null,
+    githubUrl: 'https://github.com/username/harry-potter-trivia',
     challenges: [
-      'Intégration de multiple APIs météo',
-      'Visualisation de données complexes',
-      'Optimisation des performances'
+      'Architecture modulaire avec Hilt et dependency injection',
+      'SystÃ¨me de monÃ©tisation avec RevenueCat et AdMob',
+      'Notifications locales avec timing prÃ©cis et permissions',
+      'SystÃ¨me ELO pour le classement des joueurs',
+      'IntÃ©gration Firebase complÃ¨te (Auth, Analytics, Crashlytics)',
+      'Gestion des vies avec rÃ©gÃ©nÃ©ration automatique'
     ],
     features: [
-      'Prévisions 7 jours',
-      'Cartes météo interactives',
-      'Graphiques de données',
-      'Géolocalisation',
-      'Favoris de villes',
-      'Thèmes personnalisés'
+      'Questions trivia Harry Potter avec timer',
+      'SystÃ¨me de classement ELO',
+      'Gestion des vies avec rÃ©gÃ©nÃ©ration',
+      'Achats in-app pour contenu premium',
+      'PublicitÃ©s rÃ©compensÃ©es pour vies supplÃ©mentaires',
+      'Notifications locales thÃ©matiques',
+      'Onboarding fluide avec permissions',
+      'Animations Lottie et effets sonores',
+      'Review in-app automatique',
+      'Architecture MVVM avec StateFlow'
     ]
   },
   {
     id: 4,
-    title: 'Portfolio Website',
-    description: 'Site portfolio personnel avec animations et design moderne.',
-    longDescription: 'Portfolio personnel développé avec Vue.js et animations CSS avancées. Design responsive et optimisé pour les performances.',
-    image: '/images/projects/portfolio.jpg',
-    technologies: ['Vue.js', 'SCSS', 'Vite', 'Netlify'],
-    category: 'frontend',
-    featured: false,
+    title: 'MY POKEDEX',
+    description: 'Application mobile PokÃ©dex permettant d\'explorer les 151 premiers PokÃ©mon avec leurs dÃ©tails et statistiques complÃ¨tes.',
+    longDescription: 'MY POKEDEX est une application mobile Android dÃ©veloppÃ©e en Kotlin qui permet aux utilisateurs d\'explorer la collection classique des 151 premiers PokÃ©mon. Premier projet Android, elle offre une expÃ©rience immersive avec des informations dÃ©taillÃ©es sur chaque PokÃ©mon, incluant leurs statistiques, types, et caractÃ©ristiques. Architecture MVVM avec consommation de l\'API PokeAPI.',
+    image: '/images/projects/pokedex/screen1.png',
+    images: [
+      '/images/projects/pokedex/screen1.png',
+      '/images/projects/pokedex/screen2.png'
+    ],
+    technologies: ['Kotlin', 'MVVM', 'Retrofit', 'PokeAPI', 'Fragment Navigation', 'Custom Adapters'],
+    category: 'mobile',
+    featured: true,
     status: 'completed',
-    year: 2024,
-    demoUrl: 'https://mon-portfolio.com',
-    githubUrl: 'https://github.com/username/portfolio',
+    year: 2023,
+    demoUrl: null,
+    githubUrl: 'https://github.com/username/my-pokedex',
     challenges: [
-      'Animations performantes',
-      'Design système cohérent',
-      'Optimisation SEO'
+      'Premier projet Android - apprentissage des fondamentaux',
+      'Architecture MVVM pour une structure maintenable et scalable',
+      'Consommation de l\'API PokeAPI avec Retrofit',
+      'Navigation par fragments pour un flux utilisateur fluide',
+      'CrÃ©ation d\'adaptateurs personnalisÃ©s pour l\'affichage des donnÃ©es',
+      'Gestion des interactions utilisateur et interfaces personnalisÃ©es'
     ],
     features: [
-      'Animations CSS avancées',
-      'Design responsive',
-      'Optimisation SEO',
-      'Performance élevée',
-      'Mode sombre',
-      'Contact intégré'
+      'Exploration des 151 premiers PokÃ©mon classiques',
+      'Informations dÃ©taillÃ©es sur chaque PokÃ©mon',
+      'Statistiques complÃ¨tes avec barres de progression',
+      'Interface utilisateur intuitive et navigable',
+      'Architecture MVVM robuste',
+      'IntÃ©gration API avec Retrofit',
+      'Navigation fluide par fragments',
+      'PremiÃ¨re expÃ©rience Android rÃ©ussie'
     ]
   },
   {
     id: 5,
-    title: 'Blog CMS',
-    description: 'Système de gestion de contenu pour blog avec éditeur WYSIWYG.',
-    longDescription: 'CMS personnalisé pour la création et gestion de blogs. Interface d\'administration complète avec éditeur riche et gestion des médias.',
-    image: '/images/projects/blog.jpg',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'Quill.js', 'Cloudinary'],
-    category: 'backend',
+    title: 'Flipd Apps',
+    description: 'Contribution au dÃ©veloppement d\'une application mobile de productivitÃ© utilisÃ©e par des milliers d\'utilisateurs - ExpÃ©rience professionnelle.',
+    longDescription: 'En tant que Front-End / Mobile Developer chez Flipd Inc, j\'ai contribuÃ© au dÃ©veloppement de fonctionnalitÃ©s clÃ©s d\'une application mobile de productivitÃ©. J\'ai conÃ§u et implÃ©mentÃ© un timer Pomodoro, optimisÃ© la gestion des permissions Android, et dÃ©veloppÃ© un systÃ¨me de paiement personnalisÃ© pour contourner les limitations backend. Travail en Ã©quipe Agile/Scrum avec interfaces Material3 et intÃ©grations API avancÃ©es.',
+    image: '/images/projects/flipd/screen1.png',
+    images: [
+      '/images/projects/flipd/screen1.png',
+      '/images/projects/flipd/screen2.png',
+      '/images/projects/flipd/screen3.png',
+      '/images/projects/flipd/screen4.png'
+    ],
+    technologies: ['Kotlin', 'Java', 'Jetpack Compose', 'Material3', 'Firebase', 'Dagger', 'Retrofit', 'RevenueCat', 'Vue.js', 'Coroutines', 'Flows'],
+    category: 'mobile',
     featured: true,
-    status: 'completed',
-    year: 2023,
-    demoUrl: 'https://demo-blog.com',
-    githubUrl: 'https://github.com/username/blog-cms',
+    status: 'in-progress',
+    year: 2024,
+    demoUrl: 'https://flipdapp.co',
+    githubUrl: null,
     challenges: [
-      'Éditeur de contenu riche',
-      'Gestion des médias',
-      'SEO automatique'
+      'DÃ©veloppement sur app avec milliers d\'utilisateurs en production',
+      'Optimisation des permissions Android pour stabilitÃ© et confiance',
+      'Contournement des limitations backend pour systÃ¨me de paiement',
+      'IntÃ©gration d\'APIs RESTful avec Coroutines et Flows',
+      'Interfaces accessibles et responsives avec Material3',
+      'Travail en Ã©quipe Agile/Scrum avec sprints rÃ©guliers'
     ],
     features: [
-      'Éditeur WYSIWYG',
-      'Gestion des médias',
-      'SEO optimisé',
-      'Commentaires',
-      'Catégories et tags',
-      'Analytics intégré'
+      'Timer Pomodoro pour engagement utilisateur',
+      'Gestion optimisÃ©e des permissions Android',
+      'SystÃ¨me de paiement personnalisÃ©',
+      'UI Material3 responsive et accessible',
+      'IntÃ©grations API avancÃ©es avec Coroutines/Flows',
+      'Gestion des achats in-app via RevenueCat',
+      'RÃ©duction des coÃ»ts d\'infrastructure',
+      'AmÃ©lioration de la stabilitÃ© globale'
     ]
   },
   {
     id: 6,
-    title: 'API REST Authentication',
-    description: 'API d\'authentification sécurisée avec JWT et OAuth.',
-    longDescription: 'API REST complète pour l\'authentification avec support JWT, OAuth et gestion des rôles. Documentation OpenAPI incluse.',
-    image: '/images/projects/api.jpg',
-    technologies: ['Node.js', 'Express', 'JWT', 'OAuth', 'Swagger'],
-    category: 'backend',
-    featured: false,
+    title: 'Bluesky Explorer',
+    description: 'Application web pour interagir avec l\'API Bluesky, permettant de rechercher, filtrer et exporter des posts en temps rÃ©el.',
+    longDescription: 'Bluesky Explorer est une application web dÃ©veloppÃ©e en Vue.js pour interagir avec l\'API Bluesky. Elle permet aux utilisateurs de rechercher, filtrer et exporter des posts en temps rÃ©el avec des fonctionnalitÃ©s avancÃ©es comme l\'export Excel, la recherche prÃ©configurÃ©e, et un systÃ¨me de favoris. Le projet met l\'accent sur une interface utilisateur dynamique et une gestion efficace des APIs.',
+    image: '/images/projects/bluesky/screen1.png',
+    technologies: ['JavaScript (ES6)', 'Vue.js', 'Axios', 'SheetJS', 'Day.js'],
+    category: 'web',
+    featured: true,
     status: 'completed',
     year: 2024,
-    demoUrl: null,
-    githubUrl: 'https://github.com/username/auth-api',
+    demoUrl: 'https://bluesky-explorer.com',
+    githubUrl: 'https://github.com/username/bluesky-explorer',
     challenges: [
-      'Sécurité des tokens',
-      'Gestion des sessions',
-      'Documentation complète'
+      'IntÃ©gration de l\'API publique Bluesky avec Axios',
+      'Filtrage dynamique en temps rÃ©el avec recherche multilingue',
+      'Export de donnÃ©es en format Excel avec SheetJS',
+      'Organisation du code en composants Vue.js rÃ©utilisables',
+      'Gestion de la pagination et du chargement progressif',
+      'Optimisation des performances et gestion d\'erreurs visuelles'
     ],
     features: [
-      'JWT Authentication',
-      'OAuth integration',
-      'Gestion des rôles',
-      'Rate limiting',
-      'Documentation Swagger',
-      'Tests automatisés'
-    ]
-  },
-  {
-    id: 7,
-    title: 'Mobile App Prototype',
-    description: 'Prototype d\'application mobile avec React Native.',
-    longDescription: 'Prototype d\'application mobile cross-platform pour la gestion de fitness. Interface native avec animations fluides.',
-    image: '/images/projects/mobile.jpg',
-    technologies: ['React Native', 'Expo', 'Firebase', 'Redux'],
-    category: 'mobile',
-    featured: false,
-    status: 'in-progress',
-    year: 2024,
-    demoUrl: null,
-    githubUrl: 'https://github.com/username/fitness-app',
-    challenges: [
-      'Performance native',
-      'Gestion d\'état complexe',
-      'Animations fluides'
-    ],
-    features: [
-      'Tracking d\'activité',
-      'Programmes d\'entraînement',
-      'Statistiques détaillées',
-      'Notifications push',
-      'Synchronisation cloud',
-      'Interface native'
-    ]
-  },
-  {
-    id: 8,
-    title: 'Data Visualization Tool',
-    description: 'Outil de visualisation de données avec graphiques interactifs.',
-    longDescription: 'Application web pour la visualisation de données complexes avec graphiques interactifs et tableaux de bord personnalisables.',
-    image: '/images/projects/dataviz.jpg',
-    technologies: ['D3.js', 'Vue.js', 'Node.js', 'Chart.js'],
-    category: 'fullstack',
-    featured: false,
-    status: 'completed',
-    year: 2023,
-    demoUrl: 'https://demo-dataviz.com',
-    githubUrl: 'https://github.com/username/data-viz',
-    challenges: [
-      'Traitement de gros volumes',
-      'Interactions complexes',
-      'Performance de rendu'
-    ],
-    features: [
-      'Graphiques interactifs',
-      'Filtres avancés',
-      'Export de données',
-      'Tableaux de bord',
-      'Temps réel',
-      'Responsive design'
+      'Recherche en temps rÃ©el avec support multilingue',
+      'Filtrage dynamique des rÃ©sultats',
+      'Export des donnÃ©es vers Excel',
+      'SystÃ¨me de recherches prÃ©configurÃ©es et sauvegardÃ©es',
+      'Interface utilisateur intuitive et responsive',
+      'Gestion de la pagination et chargement progressif',
+      'SystÃ¨me de favoris pour posts sÃ©lectionnÃ©s',
+      'IntÃ©gration de bibliothÃ¨ques tierces (Day.js, SheetJS)',
+      'Pratiques collaboratives avec Git et gestion de versions'
     ]
   }
 ]
 
 export const categories = [
   { id: 'all', name: 'Tous', count: projects.length },
-  { id: 'frontend', name: 'Frontend', count: projects.filter(p => p.category === 'frontend').length },
-  { id: 'backend', name: 'Backend', count: projects.filter(p => p.category === 'backend').length },
-  { id: 'fullstack', name: 'Full Stack', count: projects.filter(p => p.category === 'fullstack').length },
-  { id: 'mobile', name: 'Mobile', count: projects.filter(p => p.category === 'mobile').length }
+  { id: 'mobile', name: 'Mobile', count: projects.filter(p => p.category === 'mobile').length },
+  { id: 'web', name: 'Web', count: projects.filter(p => p.category === 'web').length }
 ]
 
 export const technologies = [
-  'Vue.js', 'React', 'Node.js', 'JavaScript', 'TypeScript',
-  'MongoDB', 'PostgreSQL', 'Express', 'Socket.io', 'JWT',
-  'SCSS', 'Tailwind CSS', 'Chart.js', 'D3.js', 'React Native'
+  'Kotlin', 'Java', 'Jetpack Compose', 'MVVM', 'MockK', 'Retrofit', 'Material Design',
+  'Firebase', 'Hilt', 'Spring Boot', 'Material Components', 'ViewBinding',
+  'Glide', 'RevenueCat', 'AdMob', 'Lottie', 'PokeAPI', 'Fragment Navigation', 'Custom Adapters',
+  'Material3', 'Vue.js', 'Coroutines', 'Flows', 'Dagger', 'JavaScript (ES6)', 'Axios', 'SheetJS', 'Day.js'
 ]
