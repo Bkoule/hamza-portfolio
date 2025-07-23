@@ -7,8 +7,9 @@
           <div class="hero-text">
             <h1 class="hero-title">À propos de moi</h1>
             <p class="hero-subtitle">
-              Passionné par le développement web et les nouvelles technologies, 
-              je crée des expériences numériques innovantes et performantes.
+              Développeur Front-End passionné avec une solide expérience dans le développement 
+              d'applications mobiles et web. Spécialisé en développement mobile natif (Android) 
+              et technologies web modernes.
             </p>
             <div class="hero-stats">
               <div class="stat">
@@ -103,9 +104,9 @@
           <div class="personal-text">
             <h2>Au-delà du code</h2>
             <p>
-              Quand je ne code pas, j'aime explorer de nouvelles technologies, 
-              contribuer à des projets open source et partager mes connaissances 
-              avec la communauté de développeurs.
+              En tant que développeur passionné, j'aime explorer de nouvelles technologies,
+              améliorer mes compétences en développement mobile et rester à jour avec
+              les dernières tendances du développement Android et web.
             </p>
             <div class="interests">
               <div class="interest" v-for="interest in interests" :key="interest.name">
@@ -119,9 +120,9 @@
           <div class="personal-image">
             <div class="quote-card">
               <blockquote>
-                "Le code est de la poésie que les machines peuvent lire."
+                "Versatile and reliable professional with several years of experience across digital communication, design, and business operations."
               </blockquote>
-              <cite>— Développeur passionné</cite>
+              <cite>— Hamza Benkhadra</cite>
             </div>
           </div>
         </div>
@@ -134,82 +135,105 @@
 import { ref } from 'vue'
 
 const stats = ref({
-  experience: 3,
-  projects: 25,
-  technologies: 15
+  experience: 2,
+  projects: 15,
+  technologies: 12
 })
 
 const skillCategories = ref([
   {
-    name: 'Frontend',
+    name: 'Mobile & Frontend',
     skills: [
-      { name: 'Vue.js', level: 90 },
-      { name: 'React', level: 85 },
-      { name: 'TypeScript', level: 80 },
-      { name: 'SCSS/CSS', level: 95 },
-      { name: 'JavaScript', level: 90 }
+      { name: 'Kotlin', level: 95 },
+      { name: 'Java', level: 90 },
+      { name: 'TypeScript', level: 85 },
+      { name: 'HTML', level: 90 },
+      { name: 'CSS', level: 85 },
+      { name: 'Vue.js', level: 80 },
+      { name: 'Jetpack Compose', level: 85 }
     ]
   },
   {
-    name: 'Backend',
+    name: 'Testing & Tools',
     skills: [
-      { name: 'Node.js', level: 85 },
-      { name: 'Express', level: 80 },
-      { name: 'MongoDB', level: 75 },
-      { name: 'PostgreSQL', level: 70 },
-      { name: 'REST APIs', level: 85 }
-    ]
-  },
-  {
-    name: 'Outils & Autres',
-    skills: [
-      { name: 'Git', level: 90 },
-      { name: 'Docker', level: 70 },
-      { name: 'AWS', level: 65 },
+      { name: 'Unit Testing (JUnit, Mockito)', level: 85 },
       { name: 'Figma', level: 80 },
-      { name: 'Vite', level: 85 }
+      { name: 'Git', level: 90 },
+      { name: 'Spring Boot', level: 75 },
+      { name: 'Firebase', level: 70 },
+      { name: 'Retrofit', level: 85 }
+    ]
+  },
+  {
+    name: 'Soft Skills',
+    skills: [
+      { name: 'Quick learner & highly adaptable', level: 95 },
+      { name: 'Solution-oriented & analytical mindset', level: 90 },
+      { name: 'Collaborative team player', level: 85 },
+      { name: 'Strong communication skills', level: 80 }
     ]
   }
 ])
 
 const timeline = ref([
   {
-    title: 'Développeur Full Stack Senior',
-    company: 'TechCorp',
-    date: '2022 - Présent',
-    description: 'Développement d\'applications web modernes et responsables d\'une équipe de 5 développeurs.',
-    skills: ['Vue.js', 'Node.js', 'MongoDB', 'AWS']
+    title: 'Front-End / Mobile Developer',
+    company: 'FLIP3 INC - BRUXELLES, BE',
+    date: 'Jul. 2024 - Présent',
+    description: 'Développement de fonctionnalités clés pour une application de productivité, amélioration des systèmes de permissions et développement d\'un système de paiement personnalisé. Intégration d\'APIs tierces et optimisation des performances.',
+    skills: ['Kotlin', 'Java', 'Pomodoro Timer', 'Payment Systems', 'Stock APIs']
   },
   {
-    title: 'Développeur Frontend',
-    company: 'WebAgency',
-    date: '2020 - 2022',
-    description: 'Création d\'interfaces utilisateur pour des clients variés avec un focus sur l\'expérience utilisateur.',
-    skills: ['React', 'TypeScript', 'SCSS', 'Figma']
+    title: 'Java Developer',
+    company: 'FLATMAP - BRUXELLES, BE',
+    date: 'Nov. 2023 - Jun. 2024',
+    description: 'Développement d\'APIs RESTful et de services backend utilisant Spring Boot. Construction d\'interfaces utilisateur mobiles avec Jetpack Compose et gestion de données avec JPA/Hibernate.',
+    skills: ['Spring Boot', 'Jetpack Compose', 'JPA/Hibernate', 'RESTful APIs']
   },
   {
-    title: 'Développeur Junior',
-    company: 'StartupTech',
-    date: '2019 - 2020',
-    description: 'Premiers pas dans le développement web professionnel avec apprentissage des bonnes pratiques.',
-    skills: ['JavaScript', 'HTML/CSS', 'Git', 'MySQL']
+    title: 'SAP Consultant',
+    company: 'VDO - CHARLEROI, BE',
+    date: 'Jan. 2023 - Nov. 2023',
+    description: 'Analyse et implémentation de processus métier SAP. Rôle de point de contact fonctionnel pour les données maître fournisseurs et clients (IMD, SD). Collaboration avec les parties prenantes pour assurer la cartographie correcte des processus.',
+    skills: ['SAP', 'Business Process', 'IMD', 'SD']
   },
   {
-    title: 'Formation Développement Web',
-    company: 'École du Web',
-    date: '2018 - 2019',
-    description: 'Formation intensive en développement web full-stack avec focus sur les technologies modernes.',
-    skills: ['Bases du web', 'Algorithmique', 'Base de données']
+    title: 'Community Manager',
+    company: 'LES P\'TITES FLEURS BLEUES - BRUXELLES, BE',
+    date: 'Jan. 2019 - Jun. 2020',
+    description: 'Gestion des réseaux sociaux et communication digitale. Création de visuels, bannières et flyers. Maintenance du site WordPress et amélioration de la stratégie de communication digitale.',
+    skills: ['Social Media', 'WordPress', 'Digital Communication', 'Content Creation']
+  },
+  {
+    title: 'Freelance Graphic Designer',
+    company: 'AUTO-ENTREPRENEUR - BRUXELLES, BE',
+    date: 'Dec. 2017 - Present',
+    description: 'Création de logos, flyers et visuels 3D pour petites entreprises. Livraison de supports de branding personnalisés utilisant Photoshop, Illustrator et Blender.',
+    skills: ['Photoshop', 'Illustrator', 'Blender', 'Branding']
+  },
+  {
+    title: 'Bachelor in Computer Science',
+    company: 'EPHEC - École Supérieure d\'Informatique - BRUXELLES, BE',
+    date: '2021 - 2024',
+    description: 'Formation complète en informatique avec spécialisation en développement logiciel et technologies modernes.',
+    skills: ['Computer Science', 'Software Development', 'Algorithms', 'Data Structures']
+  },
+  {
+    title: 'Java & Mobile Developer Training',
+    company: 'DIGITALCITY - BRUXELLES, BE',
+    date: '2023 - 2024',
+    description: 'Formation spécialisée en développement Java et mobile avec focus sur les technologies Android et les bonnes pratiques de développement.',
+    skills: ['Java', 'Android Development', 'Mobile Apps', 'Best Practices']
   }
 ])
 
 const interests = ref([
-  { name: 'Open Source', icon: '🌟' },
-  { name: 'Technologie', icon: '💻' },
-  { name: 'Design', icon: '🎨' },
-  { name: 'Voyage', icon: '✈️' },
-  { name: 'Musique', icon: '🎵' },
-  { name: 'Sport', icon: '⚽' }
+  { name: 'Mobile Development', icon: '📱' },
+  { name: 'Android', icon: '🤖' },
+  { name: 'Innovation', icon: '💡' },
+  { name: 'Learning', icon: '📚' },
+  { name: 'Gaming', icon: '🎮' },
+  { name: 'Technology', icon: '💻' }
 ])
 </script>
 
